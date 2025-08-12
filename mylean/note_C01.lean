@@ -71,13 +71,10 @@ end
 
 -- 2.3
 variable (a b c d e : ℝ)
-open Real
+-- open Real
 -- "₀" _0
 -- "≤" le
 -- is the same as <=
-end
+-- end
 
 -- Do not add "apply" when use things like norm_num
-
--- 2.4
-$check le_min

@@ -274,6 +274,8 @@ def zsmul₁ {M : Type*} [Zero M] [Add M] [Neg M] : ℤ → M → M
   | Int.ofNat n, a => nsmul₁ n a
   | Int.negSucc n, a => -nsmul₁ n.succ a
 
+lemma add_smul_pos (A : Type) [AddCommGroup₃ A]: ∀ (a b : ℤ) (m : A), (a + b) • m = a • m + b • m := by sorry
+
 instance abGrpModule (A : Type) [AddCommGroup₃ A] : Module₁ ℤ A where
   smul := zsmul₁
   zero_smul := fun a ↦ rfl
@@ -283,8 +285,7 @@ instance abGrpModule (A : Type) [AddCommGroup₃ A] : Module₁ ℤ A where
   add_smul := by
     intro a b m
     rcases a with (a | a)
-    · sorry
-    · sorry
+    sorry
   smul_add := sorry
   mul_smul := by
     intro a b m
